@@ -25,7 +25,7 @@ get '/ip' do
 end
 
 get '/pg' do
-    
+    "Connetting to PostgreSQL..." 
 end
 
 not_found do
