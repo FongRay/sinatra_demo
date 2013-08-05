@@ -1,11 +1,10 @@
-<html>
-<head>
-<title>The index page.</title>
-</head>
-<body>
-	<form action="/index" method="post">
-		<input type="text" name="msg">
-		<input type="submit">
-	</form>
-<body>
-</html>
+<h1>Notes</h1>
+<ul>
+<% @notes.each do |note| %>
+    <li>
+        <h2><a href="/note/<%= note.id %>"><%= note.title %></a></h2>
+        <p><%= note.body %></p>
+    </li>
+<% end %>
+</ul>
+<a href="/new">New notes</a>

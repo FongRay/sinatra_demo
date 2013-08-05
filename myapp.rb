@@ -6,7 +6,7 @@ require 'sinatra/reloader' if development? # gem install sinatra-reloader
 require 'haml' # gem install haml
 
 set :server, 'webrick' 
-set :bind, '10.110.162.177'
+#set :bind, '10.110.162.177'
 set :port, '4567'
 
 puts "This is process #{Process.pid}"
