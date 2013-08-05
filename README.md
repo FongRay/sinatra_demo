@@ -1,4 +1,1 @@
-sinatra_demo
-============
-
-a new learner of sinatra
+This is the README file.
