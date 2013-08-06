@@ -1,6 +1,10 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 
+set :server, 'webrick'
+set :bind, '10.110.162.177'
+set :port, '4567'
+
 db = URI.parse('postgres://rfang:1007-ecnu@localhost/test')
 
 ActiveRecord::Base.establish_connection(
@@ -16,8 +20,8 @@ class Note < ActiveRecord::Base
 end
 
 get "/" do
-    @notes = Note.order("create_at DESC")
-    redirect "/new" if @notes.empty
+    @notes = Note.order("created_at DESC")
+    redirect "/new" if @notes.empty?
     erb :index
 end
 
