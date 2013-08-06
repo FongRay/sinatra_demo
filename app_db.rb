@@ -5,7 +5,7 @@ set :server, 'webrick'
 set :bind, '10.110.162.177'
 set :port, '4567'
 
-db = URI.parse('postgres://rfang:1007-ecnu@localhost/test')
+db = URI.parse('postgres://**:****@localhost/test')
 
 ActiveRecord::Base.establish_connection(
     :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
